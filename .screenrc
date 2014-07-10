@@ -1,0 +1,6 @@
+startup_message off
+hardstatus on
+hardstatus alwayslastline "%{kw}%-w%{= BW}%50>%n %t%{-}%+w%< %= %H %Y.%m.%d. %c"
+defscrollback 8000
+altscreen on
+

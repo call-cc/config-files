@@ -1,4 +1,4 @@
 config-files
 ============
 
-Various config files / templates
+Various config files.

@@ -1,12 +1,12 @@
 filetype plugin indent on
 syntax on
 
-au BufRead,BufNewFile *.py   :call Python_stuff()
-au BufRead,BufNewFile *.html :call HTML_stuff()
-au BufRead,BufNewFile *.hs   :call Haskell_stuff()
-au Filetype gitcommit :call Git_stuff()
+au BufRead,BufNewFile *.py   :call Python_settings()
+au BufRead,BufNewFile *.html :call HTML_settings()
+au BufRead,BufNewFile *.hs   :call Haskell_settings()
+au Filetype gitcommit :call Git_settings()
 
-function! Python_stuff()
+function! Python_settings()
 	setlocal tabstop=8
 	setlocal expandtab
 	setlocal shiftwidth=4
@@ -14,21 +14,21 @@ function! Python_stuff()
 	setlocal autoindent
 endfunction
 
-function! HTML_stuff()
+function! HTML_settings()
 	setlocal tabstop=8
 	setlocal shiftwidth=4
 	setlocal softtabstop=4
 	setlocal autoindent
 endfunction
 
-function! Haskell_stuff()
+function! Haskell_settings()
 	setlocal tabstop=8
 	setlocal expandtab
 	setlocal softtabstop=4
 	setlocal shiftwidth=4
 endfunction
 
-function! Git_stuff()
+function! Git_settings()
 	setlocal spell
 	setlocal textwidth=72
 endfunction

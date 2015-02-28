@@ -1,0 +1,7 @@
+(load-option 'imail)
+(set-variable! imail-default-imap-server "10.0.3.1:10143")
+(set-variable! imail-default-user-id "X@gmail.com")
+(set-variable! imail-default-imap-mailbox "Starred")
+
+#| -adobe-courier-medium-r-normal--20-140-100-100-m-110-iso8859-1 |#
+

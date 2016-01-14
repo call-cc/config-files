@@ -33,6 +33,8 @@ function! Git_settings()
 	setlocal textwidth=72
 endfunction
 
+let g:FactorRoot = "~/Multiplexer/Factor"
+
 set modeline
 set ruler
 set incsearch
@@ -42,4 +44,7 @@ set wildignore=*.o,*~,*.pyc
 set smarttab
 set shiftround
 set nojoinspaces
+
+set statusline=%<%F%h%m%r%h%w%y\ %{&ff}%=line:%l/%L\ col:%c%V\ ascii:%b\ %P
+set laststatus=2
 

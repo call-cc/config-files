@@ -1,0 +1,7 @@
+# -*- Mode: zsh -*-
+
+# Set Emacs bindings explicitly, because zsh tries to be too smart ($EDITOR)
+bindkey -e
+bindkey '^[[1;5C' forward-word
+bindkey '^[[1;5D' backward-word
+

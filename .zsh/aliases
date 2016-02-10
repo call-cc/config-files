@@ -1,0 +1,49 @@
+# -*- Mode: zsh -*-
+
+alias ls='ls --color'
+alias grep='grep --color'
+alias rgrep='grep -r --color'
+alias vi='vim'
+# The great mysteries of life: why can't we use fractions in a calculator by default?
+alias bc='bc -l'
+alias rerc='echo "Reloading ~/.zshrc."; . ~/.zshrc'
+
+if [[ $(hostname -s) == 'elxb5bwj12-na' ]]; then
+    alias UR='~/Multiplexer/update-repos.sh'
+    alias irc='ssh -t amazon tmux a'
+    alias WS='ssh -t ws screen -dRR'
+fi
+
+alias -s txt='$PAGER'
+alias -s tar='tar -tvf'
+
+if [[ -x $(which file-roller) ]]; then
+    alias -s gz='file-roller'
+    alias -s bz2='file-roller'
+    alias -s xz='file-roller'
+fi
+
+if [[ -x $(which unrar) ]]; then
+    alias -s rar='unrar l'
+fi
+
+if [[ -x $(which unzip) ]]; then
+    alias -s zip='unzip -l'
+fi
+
+if [[ -x $(which eog) ]]; then
+    alias -s jpg='eog'
+    alias -s jpeg='eog'
+    alias -s png='eog'
+fi
+
+if [[ -x $(which evince) ]]; then
+    alias -s pdf='evince'
+fi
+
+if [[ -x $(which libreoffice) ]]; then
+    alias -s xls='libreoffice'
+    alias -s doc='libreoffice'
+    alias -s docx='libreoffice'
+fi
+

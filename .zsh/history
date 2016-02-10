@@ -1,0 +1,13 @@
+# -*- Mode: zsh -*-
+
+setopt share_history
+setopt append_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_fcntl_lock
+setopt hist_find_no_dups
+setopt hist_no_store
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.zsh/state/zsh_history
+

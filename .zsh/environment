@@ -1,0 +1,11 @@
+# -*- Mode: zsh -*-
+
+export PATH="/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/quest/bin:/opt/elx/bin"
+export EDITOR='vim'
+
+if [[ -x $(which most) ]]; then
+    export PAGER='most'
+else
+    export PAGER='less'
+fi
+

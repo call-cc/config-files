@@ -33,19 +33,19 @@ prompt_special_chars
 local fire1='yellow'
 local fire2='yellow'
 local fire3='red'
-local host='white'
-local date='white'
-local cwd='yellow'
+local phost='white'
+local pdate='white'
+local pcwd='yellow'
 
+local GRAD0="%b%f%k"
 local GRAD1="%{$schars[333]$schars[262]$schars[261]$schars[260]%}"
 local GRAD2="%{$schars[260]$schars[261]$schars[262]$schars[333]%}"
 local COLOR1="%B%F{$fire1}%K{$fire2}"
-local COLOR2="%B%F{$host}%K{$fire2}"
+local COLOR2="%B%F{$phost}%K{$fire2}"
 local COLOR3="%b%F{$fire3}%K{$fire2}"
 local COLOR4="%b%F{$fire3}%K{black}"
-local COLOR5="%B%F{$cwd}%K{black}"
-local COLOR6="%B%F{$date}%K{black}"
-local GRAD0="%b%f%k"
+local COLOR5="%B%F{$pcwd}%K{black}"
+local COLOR6="%B%F{$pdate}%K{black}"
 
 PS1=$COLOR1$GRAD1$COLOR2'%n@%m'$COLOR3$GRAD2$COLOR4$GRAD1$COLOR6'%D{%A} ${vcs_info_msg_0_}'$'\n'$COLOR5'%~'$GRAD0' %(?..%B%K{red}[%?]%K{gray}%{$reset_color%} )↳ '
 PS2=$COLOR1$GRAD1$COLOR3$GRAD2$COLOR4$GRAD1$COLOR5'>'$GRAD0' '

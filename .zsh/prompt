@@ -1,6 +1,6 @@
 # -*- Mode: zsh -*-
 #
-# Fire theme lifted from oh-my-zsh fire_prompt and modified.
+# Fire theme lifted from zsh themes and modified.
 
 autoload -U colors && colors
 autoload -Uz vcs_info
@@ -26,8 +26,7 @@ zstyle ':vcs_info:git+set-message:*' hooks check-untracked
 }
 
 local -a schars
-autoload -Uz prompt_special_chars
-prompt_special_chars
+autoload -Uz prompt_special_chars && prompt_special_chars
 
 local fire1='yellow'
 local fire2='yellow'

@@ -2,7 +2,6 @@
 #
 # Fire theme lifted from oh-my-zsh fire_prompt and modified.
 
-
 autoload -U colors && colors
 autoload -Uz vcs_info
 
@@ -50,6 +49,4 @@ local COLOR6="%B%F{$pdate}%K{black}"
 PS1=$COLOR1$GRAD1$COLOR2'%n@%m'$COLOR3$GRAD2$COLOR4$GRAD1$COLOR6'%D{%A} ${vcs_info_msg_0_}'$'\n'$COLOR5'%~'$GRAD0' %(?..%B%K{red}[%?]%K{gray}%{$reset_color%} )↳ '
 PS2=$COLOR1$GRAD1$COLOR3$GRAD2$COLOR4$GRAD1$COLOR5'>'$GRAD0' '
 RPS1='%D{%T}'
-
-prompt_opts=(cr subst percent)
 

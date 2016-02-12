@@ -6,7 +6,7 @@ socket=$(ls --color=never /tmp/ssh-*/*(=U) | head -1)
 if [[ -n $socket ]]; then
     export SSH_AUTH_SOCK=$socket
 else
-    ssh-agent
+    eval $(ssh-agent)
 fi
 
 

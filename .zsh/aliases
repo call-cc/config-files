@@ -9,6 +9,7 @@ alias factor='nohup ~/Multiplexer/Factor/factor >/dev/null 2>&1 &'
 # The great mysteries of life: why can't we use fractions in a calculator by default?
 alias bc='bc -l'
 alias free='free -h'
+alias cal='ncal -w -y'
 alias rerc='echo "Reloading ~/.zshrc."; . ~/.zshrc'
 
 if [[ $(hostname -s) == 'elxb5bwj12-na' ]]; then

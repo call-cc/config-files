@@ -52,7 +52,7 @@ let g:FactorRoot = "~/Multiplexer/Factor"
 
 set modeline
 set ruler
-set number
+set nonumber
 set incsearch
 set wildmenu
 set wildignore=*.o,*~,*.pyc

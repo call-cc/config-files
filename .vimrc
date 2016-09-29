@@ -6,6 +6,17 @@ au BufRead,BufNewFile *.html :call HTML_settings()
 au BufRead,BufNewFile *.hs   :call Haskell_settings()
 au Filetype gitcommit        :call Git_settings()
 
+if has('gui_running')
+	" Remove tool-bar
+	set guioptions-=T
+	" Remove scroll-bars
+	set guioptions-=r
+	set guioptions-=L
+	colorscheme darktooth
+else
+	colorscheme delek
+endif
+
 function! Python_settings()
 	setlocal tabstop=8
 	setlocal expandtab

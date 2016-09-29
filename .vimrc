@@ -17,6 +17,9 @@ else
 	colorscheme delek
 endif
 
+highlight UnneededWhitespace ctermbg=darkgreen guibg=orange
+match UnneededWhitespace /\s\+$/
+
 function! Python_settings()
 	setlocal tabstop=8
 	setlocal expandtab

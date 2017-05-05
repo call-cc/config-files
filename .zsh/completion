@@ -1,5 +1,7 @@
 # -*- Mode: zsh -*-
 
+setopt auto_list
+
 autoload -Uz compinit
 compinit -d ~/.zsh/state/zcompdump
 

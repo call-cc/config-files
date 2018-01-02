@@ -1,23 +1,26 @@
 # -*- Mode: zsh -*-
 
-alias ls='ls --color'
 alias grep='grep --color'
 alias rgrep='grep -r --color'
+
+if [[ $(uname -s) == 'Darwin' ]]; then
+    alias df='df -H'
+    alias ls='ls -Gp'
+else
+    alias free='free -h'
+    alias df='df -h'
+    alias ls='ls --color -p'
+fi
+
 alias vi='vim'
 # This masks 'factor' from coreutils, but who uses that anyway?
 alias factor='nohup ~/Multiplexer/Factor/factor >/dev/null 2>&1 &'
 # The great mysteries of life: why can't we use fractions in a calculator by default?
 alias bc='bc -l'
-alias free='free -h'
 alias cal='ncal -w -y'
-alias rerc='echo "Reloading ~/.zshrc."; . ~/.zshrc'
-
-if [[ $(hostname -s) == 'elxb5bwj12-na' ]]; then
-    alias UR='~/Multiplexer/update-repos.sh'
-    alias irc='ssh -t amazon tmux a'
-    alias WS='ssh -t ws screen -dRR'
-fi
-
+alias k='kubectl'
+alias irc='ssh -t aws tmux a -d'
+alias rerc='echo "Reloading ~/.zshrc."; source ~/.zshrc'
 alias -s txt='$PAGER'
 alias -s tar='tar -tvf'
 

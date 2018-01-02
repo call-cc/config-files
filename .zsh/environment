@@ -1,8 +1,18 @@
 # -*- Mode: zsh -*-
 
-export SHELL='/usr/bin/zsh'
-export PATH="/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/quest/bin:/opt/elx/bin"
+if [[ $(uname -s) == 'Darwin' ]]; then
+    export SHELL='/usr/local/bin/zsh'
+    export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
+    export LSCOLORS='ExFxCxDxBxegedabagacad'
+else
+    export SHELL='/usr/bin/zsh'
+    export PATH='/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+fi
+
 export EDITOR='vim'
+
+if [[ $(uname -s) == 'Darwin' ]]; then
+fi
 
 if [[ -x $(which most) ]]; then
     export PAGER='most'

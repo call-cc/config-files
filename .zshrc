@@ -7,9 +7,13 @@
 . ~/.zsh/abbreviations
 . ~/.zsh/history
 . ~/.zsh/bindkeys
-. ~/.zsh/ssh_agent
+
+if [[ $(uname -s) == 'Linux' ]]; then
+    . ~/.zsh/ssh_agent
+fi
+
 . ~/.zsh/settings
 . ~/.zsh/prompt
-. /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+# . /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 

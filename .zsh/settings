@@ -1,4 +1,5 @@
 # -*- Mode: zsh -*-
 
 setopt auto_cd
+setopt no_share_history
 

@@ -10,13 +10,8 @@ else
 fi
 
 export EDITOR='vim'
+export PAGER='less'
 
 if [[ $(uname -s) == 'Darwin' ]]; then
-fi
-
-if [[ -x $(which most) ]]; then
-    export PAGER='most'
-else
-    export PAGER='less'
 fi
 

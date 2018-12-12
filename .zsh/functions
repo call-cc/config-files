@@ -1,0 +1,31 @@
+function sslexp() {
+    _ix_ssl_function 'exp' $1
+}
+
+function sslfp() {
+    _ix_ssl_function 'fp' $1
+}
+
+function sslsan() {
+    _ix_ssl_function 'san' $1
+}
+
+function _ix_ssl_function() {
+    if (( $# > 2 )) then
+        echo 'Hostname not specified' >&2
+        return 1
+    fi
+
+    case "$1" in
+        exp)
+            true | openssl s_client -connect $2:443 |& openssl x509 -noout -dates
+        ;;
+        fp)
+            true | openssl s_client -connect $2:443 |& openssl x509 -fingerprint -noout
+        ;;
+        san)
+            true | openssl s_client -connect $2:443 |& openssl x509 -noout -text |& grep DNS | tr -d ' ' | tr ',' '\n'
+        ;;
+    esac
+}
+

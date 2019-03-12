@@ -5,6 +5,8 @@ au BufRead,BufNewFile *.py         :call Python_settings()
 au BufRead,BufNewFile *.yml,*.yaml :call YAML_settings()
 au BufRead,BufNewFile *.html       :call HTML_settings()
 au BufRead,BufNewFile *.hs         :call Haskell_settings()
+au BufRead,BufNewFile *.tf         :call TerraForm_settings()
+au BufRead,BufNewFile Jenkinsfile  :call Jenkinsfile_settings()
 au Filetype gitcommit              :call Git_settings()
 
 if has('gui_running')
@@ -51,6 +53,23 @@ function! Haskell_settings()
 	setlocal expandtab
 	setlocal softtabstop=4
 	setlocal shiftwidth=4
+endfunction
+
+function! TerraForm_settings()
+	setlocal tabstop=8
+	setlocal expandtab
+	setlocal shiftwidth=4
+	setlocal softtabstop=4
+	setlocal autoindent
+endfunction
+
+function! Jenkinsfile_settings()
+	setlocal tabstop=8
+	setlocal expandtab
+	setlocal shiftwidth=4
+	setlocal softtabstop=4
+	setlocal autoindent
+	setlocal filetype=Groovy
 endfunction
 
 function! Git_settings()

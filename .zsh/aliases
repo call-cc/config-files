@@ -6,6 +6,7 @@ alias rgrep='grep -r --color'
 if [[ $(uname -s) == 'Darwin' ]]; then
     alias df='df -H'
     alias ls='ls -Gp'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 else
     alias free='free -h'
     alias df='df -h'
@@ -19,7 +20,7 @@ alias factor='nohup ~/Multiplexer/Factor/factor >/dev/null 2>&1 &'
 alias bc='bc -l'
 alias cal='ncal -w -y'
 alias k='kubectl'
-alias irc='ssh -t aws tmux a -d'
+alias irc='ssh -t ping tmux a -d'
 alias rerc='echo "Reloading ~/.zshrc."; source ~/.zshrc'
 alias -s txt='$PAGER'
 alias -s tar='tar -tvf'
@@ -46,6 +47,8 @@ fi
 
 if [[ -x $(which evince) ]]; then
     alias -s pdf='evince'
+elif [[ $(uname -s) == 'Darwin' ]]; then
+    alias -s pdf='open'
 fi
 
 if [[ -x $(which libreoffice) ]]; then

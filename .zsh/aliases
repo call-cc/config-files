@@ -14,6 +14,7 @@ else
 fi
 
 alias vi='vim'
+alias vim='/usr/local/bin/vim'
 # This masks 'factor' from coreutils, but who uses that anyway?
 alias factor='nohup ~/Multiplexer/Factor/factor >/dev/null 2>&1 &'
 # The great mysteries of life: why can't we use fractions in a calculator by default?

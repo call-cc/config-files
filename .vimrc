@@ -8,6 +8,7 @@ au BufRead,BufNewFile *.yml,*.yaml     :call YAML_settings()
 au BufRead,BufNewFile *.html,*.tmpl    :call HTML_settings()
 au BufRead,BufNewFile *.hs             :call Haskell_settings()
 au BufRead,BufNewFile *.js             :call JavaScript_settings()
+au BufRead,BufNewFile *.script         :call JavaScript_settings()
 au BufRead,BufNewFile *.tf             :call TerraForm_settings()
 au BufRead,BufNewFile *.asm            :call Assembly_settings()
 au BufRead,BufNewFile Jenkinsfile      :call Jenkinsfile_settings()
@@ -86,8 +87,8 @@ endfunction
 function! TerraForm_settings()
 	setlocal tabstop=8
 	setlocal expandtab
-	setlocal shiftwidth=4
-	setlocal softtabstop=4
+	setlocal shiftwidth=2
+	setlocal softtabstop=2
 	setlocal autoindent
 endfunction
 

@@ -12,6 +12,7 @@ au BufRead,BufNewFile *.script         :call JavaScript_settings()
 au BufRead,BufNewFile *.tf             :call TerraForm_settings()
 au BufRead,BufNewFile *.asm            :call Assembly_settings()
 au BufRead,BufNewFile Jenkinsfile      :call Jenkinsfile_settings()
+au BufRead,BufNewFile *.dot            :call Dot_settings()
 au Filetype gitcommit                  :call Git_settings()
 
 if has('gui_running')
@@ -107,6 +108,15 @@ function! Jenkinsfile_settings()
 	setlocal softtabstop=4
 	setlocal autoindent
 	setlocal filetype=Groovy
+endfunction
+
+function! Dot_settings()
+	setlocal tabstop=8
+	setlocal expandtab
+	setlocal shiftwidth=4
+	setlocal softtabstop=4
+	setlocal autoindent
+	setlocal filetype=dot
 endfunction
 
 function! Git_settings()

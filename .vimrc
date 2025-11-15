@@ -11,21 +11,10 @@ au BufRead,BufNewFile *.js             :call JavaScript_settings()
 au BufRead,BufNewFile *.script         :call JavaScript_settings()
 au BufRead,BufNewFile *.tf             :call TerraForm_settings()
 au BufRead,BufNewFile *.asm            :call Assembly_settings()
-au BufRead,BufNewFile Jenkinsfile      :call Jenkinsfile_settings()
 au BufRead,BufNewFile *.dot            :call Dot_settings()
 au Filetype gitcommit                  :call Git_settings()
 
-if has('gui_running')
-	" Remove tool-bar
-	set guioptions-=T
-	" Remove scroll-bars
-	set guioptions-=r
-	set guioptions-=L
-	set guifont=Consolas\ 12
-	colorscheme darktooth
-else
-	colorscheme delek
-endif
+colorscheme delek
 
 highlight UnneededWhitespace ctermbg=darkgreen guibg=orange
 match UnneededWhitespace /\s\+$/
@@ -101,15 +90,6 @@ function! Assembly_settings()
 	setlocal autoindent
 endfunction
 
-function! Jenkinsfile_settings()
-	setlocal tabstop=8
-	setlocal expandtab
-	setlocal shiftwidth=4
-	setlocal softtabstop=4
-	setlocal autoindent
-	setlocal filetype=Groovy
-endfunction
-
 function! Dot_settings()
 	setlocal tabstop=8
 	setlocal expandtab
@@ -123,8 +103,6 @@ function! Git_settings()
 	setlocal spell
 	setlocal textwidth=72
 endfunction
-
-let g:FactorRoot = "~/Multiplexer/Factor"
 
 set modeline
 set ruler

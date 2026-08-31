@@ -1,9 +1,10 @@
 # -*- Mode: zsh -*-
 
 if [[ $(uname -s) == 'Darwin' ]]; then
-    export SHELL='/usr/local/bin/zsh'
+    export SHELL='/opt/homebrew/bin/zsh'
     export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
     export LSCOLORS='ExFxCxDxBxegedabagacad'
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
     export SHELL='/usr/bin/zsh'
     export PATH='/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'

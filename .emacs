@@ -48,7 +48,7 @@
 
 ;; (setq initial-frame-alist '((fullscreen . maximized)))
 
-(setq default-frame-alist '((font . "Consolas-17")))
+(setq default-frame-alist '((font . "Consolas-18")))
 
 ;;;; Global defaults
 
@@ -225,8 +225,6 @@
 ;; (require 'org-gcal)
 
 ;;;; Helm
-
-(require 'helm-config)
 
 (helm-mode 1)
 

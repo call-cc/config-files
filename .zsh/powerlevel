@@ -6,5 +6,8 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 # POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\uE0C7'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv time)
-. ~/Lab/powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
+source ~/Lab/powerlevel10k/powerlevel10k.zsh-theme
 

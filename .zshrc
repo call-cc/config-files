@@ -1,18 +1,13 @@
 # -*- Mode: zsh -*-
 #
 
-. ~/.zsh/environment
-. ~/.zsh/completion
-. ~/.zsh/aliases
-. ~/.zsh/abbreviations
-. ~/.zsh/history
-. ~/.zsh/bindkeys
-. ~/.zsh/functions
-. ~/.zsh/settings
-# . ~/.zsh/prompt
-. ~/Lab/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. ~/.zsh/powerlevel
+source ~/.zsh/environment
+source ~/.zsh/completion
+source ~/.zsh/aliases
+source ~/.zsh/abbreviations
+source ~/.zsh/history
+source ~/.zsh/bindkeys
+source ~/.zsh/functions
+source ~/.zsh/settings
+source ~/.zsh/powerlevel
 
-if [[ $(uname -s) == 'Linux' ]]; then
-    . ~/.zsh/ssh_agent
-fi
